@@ -4,7 +4,7 @@ const multer = require('multer');
 const upload = multer({dest: 'uploads'});
 const productController = require('./controler-v2');
 
-// First Page
+// First Page response
 router.get('/', (req,res) => {
     res.json({
         Status: `Succesfully added at ${moment().format('LTS')}`,

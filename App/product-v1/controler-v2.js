@@ -2,7 +2,7 @@ const connection = require('../../config/mysql2');
 const path = require('path');
 const fs = require('fs');
 
-// Select all Data or Delete some Data
+// Select all Data or Delete some exsist Data
 const index = (req, res) => {
     const {search} = req.query;
     let exec = {};
