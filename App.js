@@ -6,6 +6,7 @@ const router = require('./App/products/routes');
 const productRouter = require('./App/products/routes');
 const productRouterV1 = require('./App/product-v1/routes-v2');
 const productRouterV2 = require('./App/product-v2/routes');
+const port = process.env.PORT || "4000";
 
 // Module Router
 app.use(router);
@@ -31,4 +32,7 @@ app.use((req, res, next) => {
     });
 });
 
-app.listen(3001, () => console.log('Server: http://localhost:3001'));
+// App Server
+app.listen(port, () => {
+    console.log(`Listening to requests on http://localhost:${port}`);
+  });
